@@ -21,7 +21,7 @@ RUN \
 
 RUN \
   cd /root/openwrt/gee-mediatek/ && \
-  sed '16s/\[/#\[/' include/prereq-build.mk && \
+  sed -i '16s/\[/#\[/' include/prereq-build.mk && \
   make defconfig && \
   make package/network/utils/curl/compile -j V=99
 
