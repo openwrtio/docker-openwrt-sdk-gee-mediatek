@@ -21,7 +21,7 @@ RUN \
 
 RUN \
   cd /root/openwrt/gee-mediatek/ && \
-  make defconfig && \
+  make defconfig FORCE=1 && \
   make package/network/utils/curl/compile -j V=99
 
 WORKDIR /root/openwrt/gee-mediatek/
